@@ -1,12 +1,8 @@
 # Python virtual environment
-venv/
-env/
+myvenv/
 *.pyc
 __pycache__/
 
-# Node modules
-node_modules/
-
 # React build files
-build/
-dist/
+qwen_chatbot_ui/node_modules/
+qwen_chatbot_ui/build/
