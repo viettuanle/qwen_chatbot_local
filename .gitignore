@@ -5,4 +5,4 @@ __pycache__/
 
 # React build files
 qwen_chatbot_ui/node_modules/
-qwen_chatbot_ui/build/
+#qwen_chatbot_ui/build/
