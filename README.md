@@ -26,21 +26,21 @@
   link: ![qwen2.5](https://ollama.com/library/qwen2.5)
   or run commend at cmd
   `ollama run qwen2.5`
+  ![setup qwen local](./guide_img/setup_qwen.jpeg.jpeg)
+  \*test qwen2.5 works or not
+  type in :
+  `ollama run qwen2.5`
+  ![run qwen local](./guide_img/setup_qwen.jpeg.jpeg)
+  **Step2:** Setup Python environment and create FastAuvicorn server:app --reload --host 127.0.0.1 --port 8000 PI backend, then run the backend.
+  2.1 Create project using V.s Code, python
+  mkdir qwen_chatbot
+  cd qwen_chatbot
+  Open V.S Code terminal, and create virtual environment
+  python -m venv myvenv
+  .\myvenv\Scripts\activate ## activate,keep dependency lib in virtual environment
 
-\*test qwen2.5 works or not
-type in :
-`ollama run qwen2.5`
-
-**Step2:** Setup Python environment and create FastAuvicorn server:app --reload --host 127.0.0.1 --port 8000 PI backend, then run the backend.
-2.1 Create project using V.s Code, python
-mkdir qwen_chatbot
-cd qwen_chatbot
-Open V.S Code terminal, and create virtual environment
-python -m venv myvenv
-.\myvenv\Scripts\activate ## activate,keep dependency lib in virtual environment
-
-2.2 run command at V.S code terminal
-uvicorn server:app --reload --host 127.0.0.1 --port 8000
+  2.2 run command at V.S code terminal
+  uvicorn server:app --reload --host 127.0.0.1 --port 8000
 
 open web browser, and type in address: 127.0.0.1:8000
 
