@@ -26,12 +26,12 @@
   link: ![qwen2.5](https://ollama.com/library/qwen2.5)
   or run commend at cmd
   `ollama run qwen2.5`
-  ![setup qwen local](/viettuanle/qwen_chatbot_local/blob/main/guide_img/setup_qwen.jpeg)
+  ![setup qwen local](./guide_img/setup_qwen.jpeg)
 
   \*test qwen2.5 works or not
   type in :
   `ollama run qwen2.5`
-  ![run qwen local](./guide_img/setup_qwen.jpeg.jpeg)
+  ![run qwen local](./guide_img/run_qwen.jpeg)
 
   **Step2:** Setup Python environment and create FastAuvicorn server:app --reload --host 127.0.0.1 --port 8000 PI backend, then run the backend.
   2.1 Create project using V.s Code, python
