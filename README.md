@@ -62,6 +62,8 @@ Step 3: Create fontend and connect backend via API
 ## axios, is package support http request, post, get through API
 
 3.2 change file App.js
+
+```
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
@@ -95,8 +97,11 @@ placeholder="Type a message..."
 }
 
 export default App;
+```
 
 file App.js
+
+```
 .chat-container {
 max-width: 600px;
 margin: 50px auto;
@@ -130,6 +135,7 @@ padding: 10px;
 background: #f4f4f4;
 border-radius: 5px;
 }
+```
 
 3.3 Run
 at terminal,
