@@ -1,54 +1,66 @@
-## Ideal: Create a chatbot local machine with Qwen2.5.
+# Ideal: Create a chatbot local machine with Qwen2.5.
 
-#Steps:
+## Steps:
 
-- Setting up Ollama and Qwen 2.5 on a local machine
-- Using FastAPI to create a chatbot backend
-- Creating a react.js fron end for user interaction.
+- Setting up Ollama and Qwen 2.5 on a local machine.
+- Using FastAPI to create a chatbot backend.
+- Creating a react.js at front end for user interaction.
 
 * use axios package to make API request.
 
-#Tool:
-*V.S Code
-*Python
-\*React
-#Library:
+### Tool, language and AI Model support:
+
+- V.S Code
+- Python , React (JS)
+- Ollama, Qwen2.5 (model)
+
+### Library:
+
+- axios package
+- uvicorn==0.34.0, fastapi
 
 **Step 1:**
 
 - Install ollama
-- Download Qwen 2.5 Mocel
+- Download Qwen 2.5 Model
 - Test the Qwen 2.5 Model
 
-* 1/1 Install ollama
-  download ollama from ollama.com
-  download Qwen2.5 model,
-  link: ![qwen2.5](https://ollama.com/library/qwen2.5)
+_1.1 Install ollama_
+
+- download ollama from ollama.com
+- download Qwen2.5 model at: <a href="https://ollama.com/library/qwen2.5">ollama 2.5 download</a>
   or run commend at cmd
-  `ollama run qwen2.5`
-  ![setup qwen local](./guide_img/setup_qwen.jpeg)
+  > `ollama run qwen2.5` > ![setup qwen local](./guide_img/setup_qwen.jpeg)
 
-  \*test qwen2.5 works or not
-  type in :
-  `ollama run qwen2.5`
-  ![run qwen local](./guide_img/run_qwen.jpeg)
+_1.2 test qwen2.5 works or not_
+type in :
 
-  **Step2:** Setup Python environment and create FastAuvicorn server:app --reload --host 127.0.0.1 --port 8000 PI backend, then run the backend.
-  2.1 Create project using V.s Code, python
-  mkdir qwen_chatbot
-  cd qwen_chatbot
-  Open V.S Code terminal, and create virtual environment
-  python -m venv myvenv
-  .\myvenv\Scripts\activate ## activate,keep dependency lib in virtual environment
+> `ollama run qwen2.5`
+> Let ask any question and see the answer.
+> ![run qwen local](./guide_img/run_qwen.jpeg)
 
-  2.2 run command at V.S code terminal
-  uvicorn server:app --reload --host 127.0.0.1 --port 8000
+**Step 2:** Setup Python environment and create FastApi,
+uvicorn server:app --reload --host 127.0.0.1 --port 8000 PI backend, then run the backend.
+_2.1 Create project using V.s Code, python_
+
+```
+mkdir qwen_chatbot
+cd qwen_chatbot
+```
+
+Open V.S Code terminal, and create virtual environment
+`python -m venv myvenv`
+`.\myvenv\Scripts\activate` ## activate,keep dependency lib in virtual environment
+Install uvicorn library
+`pip install uvicorn`
+_2.2 run command at V.S code terminal_
+uvicorn server:app --reload --host 127.0.0.1 --port 8000
 
 open web browser, and type in address: 127.0.0.1:8000
 
 - Test POST request, with message: Hello AI!
 
-Step 3: Create fontend and connect backend via API
+**Step 3**: Create frontend and connect backend via API
 
 - Setup React app
 - Create Chat UI, Style the Chat UI
@@ -56,12 +68,15 @@ Step 3: Create fontend and connect backend via API
   3.1 Setup React app
 - Install node.js
 - Create new react application named "qwen_chatbot_ui"
+
+```
   cd qwen_chatbot
   npx create-react-app qwen_chatbot_ui
   cd qwen_chatbot_ui
-  npm install axios ##install axios,
+  npm install axios ##install axios package
+```
 
-## axios, is package support http request, post, get through API
+axios, is package support http request, post, get through API
 
 3.2 change file App.js
 
@@ -139,10 +154,14 @@ border-radius: 5px;
 }
 ```
 
-3.3 Run
+**3.3 Run**
 at terminal,
+
+```
 cd qwen_chatbot_ui
 npm start
+```
 
 open link http://localhost:3003
-get result
+Just ask question from chat box, and wait for result:
+![run qwen local](./guide_img/result.jpeg)
