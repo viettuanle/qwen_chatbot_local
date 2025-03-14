@@ -30,7 +30,8 @@ _1.1 Install ollama_
 - download ollama from ollama.com
 - download Qwen2.5 model at: <a href="https://ollama.com/library/qwen2.5">ollama 2.5 download</a>
   or run commend at cmd
-  > `ollama run qwen2.5` > ![setup qwen local](./guide_img/setup_qwen.jpeg)
+  `ollama run qwen2.5`
+  ![setup qwen local](./guide_img/setup_qwen.jpeg)
 
 _1.2 test qwen2.5 works or not_
 type in :
